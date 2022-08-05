@@ -20,6 +20,7 @@ print('Maden by Mykyta Dubov', 'Greetings!!!', 'This program can do some matrix 
 print('Here is the list of operations I can ofer for you:')
 print('1:Determinant' , '2:Inverse Matrix', '3:Matrix Traspose', '4:Matrix Rank', '5:Gauss elimination','6:Addition', '7:Subtraction', '8:Multiplication', '9:N-power', sep = '\n')
 print()
+print()
 print('Please enter the number of the operation you would like to use')
 operation = int(input())
 re = lambda:map(int , input().split())
