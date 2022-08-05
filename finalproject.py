@@ -23,8 +23,7 @@ print()
 print('Please enter the number of the operation you would like to use')
 operation = int(input())
 re = lambda:map(int , input().split())
-match operation:
-  case 1:
+if operation == 1:
     print('Please enter the matrix size(just one number) and then on the next line the whole matrix ')
     n = int(input())
     a = np.zeros((n, n))
@@ -34,7 +33,7 @@ match operation:
         for j in range (len(b)):
             a[i,j] = b[j]
     print(np.linalg.det(a))
-  case 2:
+if operation == 2:
     print('Please enter the matrix size(just one number) and then on the next line the whole matrix ')
     n = int(input())
     a = np.zeros((n, n))
@@ -44,8 +43,7 @@ match operation:
         for j in range (len(b)):
             a[i, j] = b[j]
     print(np.linalg.inv(a))
-    
-  case 3:
+if operation == 3:
     print('Please enter the matrix size(just one number) and then on the next line the whole matrix ')
     n, m = re()
     a = np.zeros((n, m))
@@ -55,7 +53,7 @@ match operation:
         for j in range (len(b)):
             a[i, j] = b[j]
     print(np.transpose(a))
-  case 4:
+if operation == 4:
     print('Please enter the matrix size(just one number) and then on the next line the whole matrix')
     n, m = re()
     a = np.zeros((n, m))
@@ -65,7 +63,7 @@ match operation:
         for j in range (len(b)):
             a[i, j] = b[j]
     print(np.linalg.matrix_rank(a))
-  case 5:
+if operation == 5:
     print('Please enter the matrix size and then on the next line the whole matrix')
     n, m = re()
     a = np.zeros((n, m))
@@ -74,7 +72,7 @@ match operation:
         for j in range (len(b)):
             a[i, j] = b[j]
     print(gauss(a))
-  case 6:
+if operation == 6:
     print('Please enter the matrix A size and then on the next string the whole matrix A')
     n, m = re()
     a = np.zeros((n, m))
@@ -91,7 +89,7 @@ match operation:
         for j in range (len(c)):
             b[i, j] = c[j]
     print(a + b)
-  case 7:
+if operation == 7:
     print('Please enter the matrix A size and then on the next string the whole matrix A')
     n, m = re()
     a = np.zeros((n, m))
@@ -108,7 +106,7 @@ match operation:
         for j in range (len(c)):
             b[i, j] = c[j]
     print(a - b)
-  case 8:
+if operation == 8:
     print('Please enter the matrix A size and then on the next string the whole matrix A')
     n, m = re()
     a = np.zeros((n, m))
@@ -131,7 +129,7 @@ match operation:
             for t in range(len(b)):
                 result[i][j] += a[i, t] * b[t, j]
     print(result)
-  case 9:
+if operation == 9:
     print('Please enter the matrix A size and then on the next string the whole matrix A')
     n = int(input())
     a = np.zeros((n, n))
@@ -143,5 +141,3 @@ match operation:
     num = int(input())
     #a = a.astype(np.int64)
     print(np.linalg.matrix_power(a, num))
-  case _:
-      print('Unfortunately you have written the wrong number, please try again :)')
